@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Portafolio</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <style>
+        /* Botón Ir Arriba
+      ----------------------------------------------- */
+      #Boton-ir-arriba{display:none;z-index:1010;width:32px;height:32px;position:fixed;bottom:25px;right:25px;cursor:pointer;overflow:hidden;font-size:13px;color:#fff;text-align:center;line-height:32px;border-radius:0}
+      #Boton-ir-arriba:before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-color:#000;opacity:.5;transition:opacity .17s ease}
+      #Boton-ir-arriba:after{font-size: 15px; content:'\f077';position:relative;font-family:FontAwesome;font-weight:400;opacity:.8;transition:opacity .17s ease}
+      #Boton-ir-arriba:hover:before,#Boton-ir-arriba:hover:after,.nav-active #Boton-ir-arriba:after,.nav-active #Boton-ir-arriba:before{opacity:1}
+      /*f0d8 - f077 - f106 - f062 - f176 - f0a6 - f102*/
+    </style>
+
+    <!-- Efectos secciones - https://anijs.github.io/ -->
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css" />
+
+    <!-- Efectos textos - https://animate.style/ -->
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar grid--container">
+        <a class="navbar__logo" href="#"><i class='bx bxs-registered'></i> Felipe Grillo</a>
+
+        <div id="nav" class="navbar__menu">
+          <a href="#close"><i class="bx bx-x btn__close navbar__icon"></i></a>
+
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a class="navbar__link" href="#home">Inicio</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#about">Acerca de Mí</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#projects">Portafolio</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#nav"><i class="bx bx-menu btn__open navbar__icon"></i></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- The example -> https://anijs.github.io/
+  <div class="container center">
+    <p>Just scroll the window ;)</p>
+    <div class="item orange" 
+         data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal repeat">
+      <i class="fa fa-behance"></i>
+    </div>
+    <div class="item pink"
+      data-anijs="if: scroll, on: window, do: bounceIn animated, before: $scrollReveal">
+      <i class="fa fa-pinterest"></i>
+    </div> 
+    <div class="item green"
+      data-anijs="if: scroll, on: window, do: rotateIn animated, before: $scrollReveal">
+      <i class="fa fa-dribbble"></i>
+    </div>
+    <div class="item blue"
+      data-anijs="if: scroll, on: window, do: rubberBand animated, before: $scrollReveal">
+      <i class="fa fa-dropbox"></i>
+    </div>
+    <div class="item orange"
+        data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal">
+        <i class="fa fa-html5"></i>
+    </div>
+    <div class="item pink"
+      data-anijs="if: scroll, on: window, do: bounceIn animated, before: $scrollReveal">
+      <i class="fa fa-wordpress"></i>
+    </div> 
+    <div class="item green"
+      data-anijs="if: scroll, on: window, do: rotateIn animated, before: $scrollReveal">
+      <i class="fa fa-reddit"></i>
+    </div>
+    <div class="item blue"
+      data-anijs="if: scroll, on: window, do: rubberBand animated, before: $scrollReveal">
+      <i class="fa fa-umbrella"></i>
+    </div>
+  </div>
+   End example -->
+      <section id="home" class="home">
+        <div class="home__container grid--container">
+          <div class="home__image">
+            <span></span>
+            <img src="assets/img/fotoperfil.jpeg" alt="profile photo" width="300px" />
+          </div>
+
+          <ul class="home__social">
+            <li class="home__social-item">
+              <a class="home__social-link" href="https://instagram.com/felipe_fagm?igshid=ZDdkNTZiNTM=" target="_blank"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+            <li class="home__social-item">
+              <a class="home__social-link" href="https://www.facebook.com/felipe.a.murillo" target="_blank"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+            </li>
+          </ul>
+
+          <div class="home__info">
+            <div class="animate__animated animate__zoomIn animate__delay-1s">
+              <h1 class="home__title">
+                Felipe Grillo
+              </h1>
+            </div>
+            <p class="home__description">
+              "Programar es como resolver un rompecabezas infinito donde la única limitación es tu propia imaginación"
+            </p>
+          </div>
+
+          <div class="home__buttons" data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+            <button class="btn btn--primary" type="button"><b>Descarga CV</b></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <h1 class="section__title">Acerca de Mí</h1>
+
+        <div class="about__container grid--container">
+          <p class="about__description">
+            <strong>Bienvenido a mi perfil</strong>, es un gusto para mí ofrecerte mis servicios, <strong>soy Felipe Grillo, Ingeniero de Sistemas, 
+            egresado de la Universidad Cooperativa de Colombia,</strong> con capacidad de análisis y discernimiento, preparado para 
+            enfrentar nuevos retos y tecnologías. Tengo conocimientos en <strong>copywiter, marketing digital, administrador de páginas 
+            web</strong> 
+            hechas en gestores de contenido <strong>(Wordpress, Joomla, Drupal)</strong>, sistema de gestión de aprendizaje <strong>Moodle.</strong> 
+            Destreza en programación <strong>(Java Script, React),</strong> maquetación <strong>(HTML5, CSS3),</strong> manejo de base de datos <strong>(phpmyadmin mysql).</strong> 
+            Con una visión y objetivo claro de estar actualizando y fortaleciendo mis habilidades para un trabajo íntegro y de calidad, 
+            <strong>con la meta liderar proyectos Full-stack.</strong>
+          </p>
+
+          <div class="about__skills grid--container">
+            <div class="about__cards">
+              <!--Card 1 -->
+              <div class="about__card" data-anijs="if: scroll, on: window, do: rubberBand animated, before: $scrollReveal">
+                <i class="bx bxl-html5"></i>
+
+                <h3 class="about__card-title">HTML5</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <!--Card 2 -->
+              <div class="about__card" data-anijs="if: scroll, on: window, do: rubberBand animated, before: $scrollReveal">
+                <i class="bx bxl-css3"></i>
+
+                <h3 class="about__card-title">CSS3</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <!--Card 3 -->
+              <div class="about__card" data-anijs="if: scroll, on: window, do: rubberBand animated, before: $scrollReveal">
+                <i class="bx bxl-javascript"></i>
+
+                <h3 class="about__card-title">JavaScript</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+
+            <div class="about__tags">
+              <h3 class="about__tags-title">Habilidades</h3>
+              <div class="about__tags-container">
+                <span class="about__tag">Responsable</span>
+                <span class="about__tag">Trabajo en equipo</span>
+                <span class="about__tag">Creativo</span>
+                <span class="about__tag">Puntual</span>
+                <span class="about__tag">Proactivo</span>
+                <span class="about__tag">Autodidacta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section">
+        <h1 class="section__title">Proyectos</h1>
+
+        <div class="projects__container grid--container">
+          <div class="projects__project">
+            <div class="projects__inner grid--container">
+              <div class="projects__image" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal">
+                <img src="assets/img/programador.png" alt="project 1" />
+              </div>
+
+              <div class="projects__info">
+                <h3 class="projects__name">Proyecto 1</h3>
+                <p class="projects__description">
+                  "Javascript es el mago que da vida a las páginas web, convirtiendo simples clics en experiencias interactivas y memorables".
+                </p>
+
+                <div class="projects__buttons">
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER DEMO</b>
+                    </button>
+                  </div>
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER CÓDIGO</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__project">
+            <div class="projects__inner grid--container">
+              <div class="projects__image" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal">
+                <img src="assets/img/css.png" alt="project 1" />
+              </div>
+
+              <div class="projects__info">
+                <h3 class="projects__name">Proyecto 2</h3>
+                <p class="projects__description">
+                  "Con CSS, puedes pintar un mundo digital tan hermoso como un atardecer en el horizonte."
+                </p>
+
+                <div class="projects__buttons">
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER DEMO</b>
+                    </button>
+                  </div>
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER CÓDIGO</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__project">
+            <div class="projects__inner grid--container">
+              <div class="projects__image" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal">
+                <img src="assets/img/biblioteca.png" alt="project 1" />
+              </div>
+
+              <div class="projects__info">
+                <h3 class="projects__name">Proyecto 3</h3>
+                <p class="projects__description">
+                  "Las bases de datos son como bibliotecas digitales, donde cada dato es un libro esperando ser descubierto y utilizado para contar historias increíbles".
+                </p>
+
+                <div class="projects__buttons">
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER DEMO</b>
+                    </button>
+                  </div>
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER CÓDIGO</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__project">
+            <div class="projects__inner grid--container">
+              <div class="projects__image" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal">
+                <img src="assets/img/programacion.png" alt="project 1" />
+              </div>
+
+              <div class="projects__info">
+                <h3 class="projects__name">Proyecto 4</h3>
+                <p class="projects__description">
+                  "La programación es el arte de crear mundos digitales, donde la imaginación es el límite y la creatividad es la herramienta más poderosa".
+                </p>
+
+                <div class="projects__buttons">
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER DEMO</b>
+                    </button>
+                  </div>
+                  <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                    <button class="btn projects__button" type="button">
+                      <b>VER CÓDIGO</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <h2 class="section__title">Contacto</h2>
+
+        <div class="contact__container grid--container">
+          <div class="contact__info">
+            <h3 class="contact__info-title">Información de contacto</h3>
+            <p class="contact__info-description">
+              Dame el gusto de atenderte, para cualquier información te dejo a disposicion todos mis canales de contacto. 
+            </p>
+
+            <address class="contatc__info-data">
+              <div class="contact__info-item">
+                <i class='bx bxl-whatsapp'></i>
+
+                <span class="contact__info-number">
+                  <a
+                    href="https://wa.me/0000000000000?text=Tu%20Mensaje%20De%20Texto"
+                    target="_blank"
+                    >Enviar mensaje a WhatsApp</a
+                  >
+                </span>
+              </div>
+
+              <div class="contact__info-item">
+                <i class="bx bx-phone"></i>
+
+                <span class="contact__info-number">
+                  <a href="tel:1-234-567-8910"> +1 123 456 7890 </a>
+                </span>
+              </div>
+
+              <div class="contact__info-item">
+                <i class="bx bxs-envelope"></i>
+
+                <span class="contact__info-mail">
+                  <a id="mail" href="mailto:test@correo.com"> ing.felipegrillo@gmail.com </a>
+                </span>
+              </div>
+
+              <div class="contact__info-item">
+                <i class="bx bx-map"></i>
+
+                <span class="contact__info-map"> Neiva, Colombia. </span>
+              </div>
+            </address>
+          </div>
+
+          <div class="contact__form">
+            <h3 class="contact__form-title">Enviar mensaje</h3>
+
+            <form id="form" class="contact__form-container">
+              <div class="contact__form-group">
+                <label for="name" class="contact__form-label">Nombre</label>
+                <input type="text" id="name" name="name" class="contact__form-input" />
+              </div>
+
+              <div class="contact__form-group">
+                <label for="subject" class="contact__form-label">Asunto</label>
+                <input type="text" id="subject" name="subject" class="contact__form-input" />
+              </div>
+
+              <div class="contact__form-group">
+                <label for="message" class="contact__form-label">Mensaje</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  class="contact__form-input"
+                ></textarea>
+              </div>
+
+              <div data-anijs="if: click, do: pulse animated, to: $children .content-wrapper">
+                <button type="submit" class="btn contact__form-button">
+                  <b>Enviar</b>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section">
+      <div class="footer__container grid--container">
+        <div class="footer__info">
+          <h3 class="footer__title">Felipe Grillo</h3>
+          <p class="footer__description">
+            Soy desarrollador web, apasionado por la tecnología y la
+            programación.
+          </p>
+        </div>
+
+        <div class="footer__social">
+          <h3 class="footer__title">Redes Sociales</h3>
+
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://www.facebook.com/felipe.a.murillo" target="_blank"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+            </li>
+
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://instagram.com/felipe_fagm?igshid=ZDdkNTZiNTM=" target="_blank"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+            </li>
+
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__copy">&copy; 2023, Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+      const formulario = document.querySelector('#form')
+      const sendForm = document.querySelector('#mail')
+
+      formulario.addEventListener('submit', handleSubmit)
+
+      function handleSubmit(e) {
+        e.preventDefault()
+        const form = new FormData(this)
+        sendForm.setAttribute('href', `mailto:test@correo.com?subject=${form.get('name')} - ${form.get('subject')}&body=${form.get('message')}`)
+        sendForm.click()
+      }
+    </script>
+    
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
+    <div id='Boton-ir-arriba'></div>
+    <script type='text/javascript'>
+      //<![CDATA[
+      // Botón para Ir Arriba
+      jQuery.noConflict();
+      jQuery(document).ready(function() {
+      jQuery("#Boton-ir-arriba").hide();
+      jQuery(function () {
+      jQuery(window).scroll(function () {
+      if (jQuery(this).scrollTop() > 200) {
+      jQuery('#Boton-ir-arriba').fadeIn();
+      } else {
+      jQuery('#Boton-ir-arriba').fadeOut();
+      }
+      });
+      jQuery('#Boton-ir-arriba').click(function () {
+      jQuery('body,html').animate({
+      scrollTop: 0
+      }, 100);
+      return false;
+      });
+      });
+      
+      
+      });
+      //]]>
+      </script>
+
+
+      <!-- Script Animación Secciones -->
+      <script src="https://anijs.github.io/lib/anijs/anijs.js"></script>
+      <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
+  </body>
+</html>
